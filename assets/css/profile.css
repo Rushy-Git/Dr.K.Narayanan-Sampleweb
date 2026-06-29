@@ -1,0 +1,708 @@
+/*==================================================
+PROFILE.CSS
+Premium Faculty Profile Page
+==================================================*/
+
+/*==================================
+PROFILE HERO
+==================================*/
+
+.page-hero{
+    padding:170px 0 90px;
+    background:linear-gradient(135deg,#0F766E,#14532D,#0F172A);
+    position:relative;
+    overflow:hidden;
+}
+
+.page-hero::before{
+    content:'';
+    position:absolute;
+    width:420px;
+    height:420px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    top:-180px;
+    right:-180px;
+}
+
+.page-hero::after{
+    content:'';
+    position:absolute;
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    background:rgba(255,255,255,.05);
+    bottom:-150px;
+    left:-150px;
+}
+
+.page-hero-content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    color:#fff;
+}
+
+.hero-tag{
+    display:inline-block;
+    padding:10px 24px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(12px);
+    border-radius:40px;
+    font-size:15px;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+.page-hero-content h1{
+    font-size:58px;
+    margin:25px 0 18px;
+    color:#fff;
+    font-weight:800;
+}
+
+.page-hero-content p{
+    max-width:760px;
+    margin:auto;
+    line-height:1.9;
+    font-size:18px;
+    color:#E2E8F0;
+}
+
+.breadcrumb{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    margin-top:35px;
+    font-size:15px;
+}
+
+.breadcrumb a{
+    color:#fff;
+    text-decoration:none;
+}
+
+.breadcrumb strong{
+    color:var(--accent);
+}
+
+/*==================================
+PROFILE INTRO
+==================================*/
+
+.profile-intro{
+    padding:110px 0;
+    background:#F8FAFC;
+}
+
+.profile-grid{
+    display:grid;
+    grid-template-columns:360px 1fr;
+    gap:60px;
+    align-items:start;
+}
+
+/*==================================
+PROFILE CARD
+==================================*/
+
+.profile-photo-card{
+    background:#fff;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.profile-photo-card:hover{
+    transform:translateY(-10px);
+}
+
+.profile-photo-card img{
+    width:100%;
+    height:460px;
+    object-fit:cover;
+}
+
+.profile-details{
+    padding:35px;
+}
+
+.profile-details h2{
+    color:var(--primary);
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.profile-details>p{
+    color:#64748B;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.profile-details hr{
+    border:none;
+    height:1px;
+    background:#E2E8F0;
+    margin:25px 0;
+}
+
+.mini-info{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.mini-info p{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    color:#475569;
+}
+
+.mini-info i{
+    width:24px;
+    color:var(--primary);
+    font-size:18px;
+}
+
+/*==================================
+PROFILE SUMMARY
+==================================*/
+
+.profile-summary{
+    padding-top:15px;
+}
+
+.profile-summary .section-title{
+    text-align:left;
+    margin-bottom:30px;
+}
+
+.profile-summary .section-title span{
+    color:var(--accent);
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.profile-summary .section-title h2{
+    margin-top:10px;
+}
+
+.profile-summary p{
+    line-height:2;
+    color:#475569;
+    margin-bottom:20px;
+}
+
+.profile-buttons{
+    display:flex;
+    gap:18px;
+    margin-top:35px;
+    flex-wrap:wrap;
+}
+
+.profile-buttons .btn{
+    min-width:170px;
+    justify-content:center;
+}
+
+/*==================================
+FLOATING IMAGE EFFECT
+==================================*/
+
+.profile-photo-card{
+    animation:floatCard 6s ease-in-out infinite;
+}
+
+@keyframes floatCard{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/*==================================
+RESPONSIVE
+==================================*/
+
+@media(max-width:992px){
+
+    .profile-grid{
+        grid-template-columns:1fr;
+    }
+
+    .profile-photo-card{
+        max-width:420px;
+        margin:auto;
+    }
+
+    .page-hero-content h1{
+        font-size:46px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .page-hero{
+        padding:140px 0 70px;
+    }
+
+    .page-hero-content h1{
+        font-size:36px;
+    }
+
+    .page-hero-content p{
+        font-size:16px;
+    }
+
+    .profile-buttons{
+        flex-direction:column;
+    }
+
+    .profile-buttons .btn{
+        width:100%;
+    }
+
+}
+/*==================================================
+PERSONAL INFORMATION SECTION
+==================================================*/
+
+.personal-info{
+    padding:110px 0;
+    background:#F1F5F9;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:50px;
+}
+
+.info-box{
+    background:#fff;
+    padding:35px;
+    border-radius:22px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.06);
+    transition:.35s;
+    position:relative;
+    overflow:hidden;
+}
+
+.info-box::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background:linear-gradient(90deg,var(--primary),var(--accent));
+}
+
+.info-box:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+}
+
+.info-box i{
+    font-size:42px;
+    color:var(--primary);
+    margin-bottom:18px;
+}
+
+.info-box h3{
+    font-size:22px;
+    margin-bottom:10px;
+    color:#0F172A;
+}
+
+.info-box p{
+    color:#475569;
+    line-height:1.7;
+}
+
+/*==================================================
+ACADEMIC TIMELINE
+==================================================*/
+
+.academic-journey{
+    padding:110px 0;
+    background:#fff;
+}
+
+.timeline{
+    position:relative;
+    max-width:900px;
+    margin:60px auto 0;
+}
+
+.timeline::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:4px;
+    height:100%;
+    background:linear-gradient(180deg,var(--primary),var(--accent));
+    border-radius:10px;
+}
+
+.timeline-item{
+    position:relative;
+    width:50%;
+    padding:25px 40px;
+    margin-bottom:45px;
+}
+
+.timeline-item:nth-child(odd){
+    left:0;
+    text-align:right;
+}
+
+.timeline-item:nth-child(even){
+    left:50%;
+}
+
+.timeline-item::before{
+    content:'';
+    position:absolute;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:var(--accent);
+    border:4px solid #fff;
+    box-shadow:0 0 0 4px var(--primary);
+    top:30px;
+}
+
+.timeline-item:nth-child(odd)::before{
+    right:-10px;
+}
+
+.timeline-item:nth-child(even)::before{
+    left:-10px;
+}
+
+.timeline-item h3{
+    font-size:22px;
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.timeline-item span{
+    display:inline-block;
+    margin-bottom:12px;
+    font-weight:600;
+    color:#64748B;
+}
+
+.timeline-item p{
+    color:#475569;
+    line-height:1.8;
+}
+
+.timeline-item::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:#F8FAFC;
+    border-radius:18px;
+    z-index:-1;
+    transition:.3s;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.timeline-item:hover::after{
+    transform:translateY(-8px);
+}
+
+/*==================================================
+RESPONSIVE DESIGN
+==================================================*/
+
+@media(max-width:992px){
+
+    .info-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .timeline::before{
+        left:20px;
+    }
+
+    .timeline-item{
+        width:100%;
+        left:0 !important;
+        text-align:left !important;
+        padding-left:60px;
+        padding-right:20px;
+    }
+
+    .timeline-item::before{
+        left:0 !important;
+        right:auto !important;
+    }
+}
+
+@media(max-width:768px){
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .timeline-item{
+        padding-left:55px;
+    }
+}
+/*==================================================
+PROFESSIONAL MEMBERSHIPS
+==================================================*/
+
+.memberships{
+    padding:110px 0;
+    background:#F8FAFC;
+}
+
+.memberships .highlight-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:50px;
+}
+
+.memberships .highlight-card{
+    background:#fff;
+    padding:40px 30px;
+    border-radius:22px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.06);
+    transition:.35s;
+    position:relative;
+    overflow:hidden;
+}
+
+.memberships .highlight-card::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background:linear-gradient(90deg,var(--primary),var(--accent));
+}
+
+.memberships .highlight-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+}
+
+.memberships .highlight-card i{
+    font-size:44px;
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+.memberships .highlight-card h3{
+    margin-bottom:10px;
+    color:#0F172A;
+}
+
+/*==================================================
+RESEARCH INTEREST
+==================================================*/
+
+.research-interest{
+    padding:110px 0;
+    background:#fff;
+}
+
+.research-interest .about-info{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+    margin-top:50px;
+}
+
+.research-interest .info-card{
+    background:#F8FAFC;
+    padding:35px;
+    border-radius:22px;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+    transition:.35s;
+}
+
+.research-interest .info-card:hover{
+    background:var(--primary);
+    transform:translateY(-10px);
+}
+
+.research-interest .info-card:hover i,
+.research-interest .info-card:hover h4,
+.research-interest .info-card:hover p{
+    color:#fff;
+}
+
+.research-interest .info-card i{
+    font-size:40px;
+    color:var(--primary);
+    margin-bottom:18px;
+    transition:.35s;
+}
+
+.research-interest .info-card h4{
+    margin-bottom:10px;
+    font-size:20px;
+}
+
+.research-interest .info-card p{
+    color:#475569;
+    line-height:1.7;
+}
+
+/*==================================================
+LANGUAGES
+==================================================*/
+
+.languages{
+    padding:110px 0;
+    background:#030303;
+}
+
+/* reuse stat-card styling from main CSS */
+.stat-card{
+    background:#1c1919;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.06);
+    transition:.35s;
+}
+
+.stat-card:hover{
+    transform:translateY(-10px);
+}
+
+.stat-card i{
+    font-size:40px;
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.stat-card h2{
+    font-size:26px;
+    margin-bottom:8px;
+}
+
+/*==================================================
+TEACHING PHILOSOPHY
+==================================================*/
+
+.vision{
+    padding:110px 0;
+    background:#fff;
+}
+
+.vision-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+    margin-top:50px;
+}
+
+.vision-card{
+    background:#F8FAFC;
+    padding:40px;
+    border-radius:22px;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+    transition:.35s;
+}
+
+.vision-card:hover{
+    transform:translateY(-10px);
+    background:var(--primary);
+}
+
+.vision-card:hover i,
+.vision-card:hover h3,
+.vision-card:hover p{
+    color:#fff;
+}
+
+.vision-card i{
+    font-size:42px;
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+.vision-card h3{
+    margin-bottom:12px;
+}
+
+/*==================================================
+QUOTE SECTION
+==================================================*/
+
+.cta{
+    padding:120px 0;
+    background:linear-gradient(135deg,var(--primary),#14532D);
+    text-align:center;
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+}
+
+.cta h2{
+    font-size:38px;
+    font-style:italic;
+    max-width:900px;
+    margin:auto auto 25px;
+    line-height:1.5;
+}
+
+.cta p{
+    max-width:700px;
+    margin:auto auto 35px;
+    color:#E2E8F0;
+}
+
+/*==================================================
+RESPONSIVE FINAL FIX
+==================================================*/
+
+@media(max-width:992px){
+
+    .memberships .highlight-grid{
+        grid-template-columns:1fr;
+    }
+
+    .research-interest .about-info{
+        grid-template-columns:1fr;
+    }
+
+    .vision-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:768px){
+
+    .cta h2{
+        font-size:26px;
+    }
+}

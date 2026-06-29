@@ -1,0 +1,119 @@
+/*==================================================
+PUBLICATIONS PAGE
+==================================================*/
+
+/* HERO */
+
+.page-hero{
+    padding:170px 0 90px;
+    background:linear-gradient(135deg,#0F766E,#14532D,#0F172A);
+    text-align:center;
+    color:#fff;
+}
+
+.hero-tag{
+    display:inline-block;
+    padding:10px 20px;
+    background:rgba(255,255,255,.15);
+    border-radius:40px;
+    margin-bottom:20px;
+}
+
+.page-hero h1{
+    font-size:54px;
+    margin-bottom:15px;
+}
+
+.page-hero p{
+    max-width:750px;
+    margin:auto;
+    color:#E2E8F0;
+}
+
+/* INTRO */
+
+.pub-intro{
+    padding:100px 0;
+    background:#F8FAFC;
+    text-align:center;
+}
+
+.section-title span{
+    color:var(--primary);
+    font-weight:700;
+}
+
+.section-title h2{
+    font-size:36px;
+    margin-top:10px;
+}
+
+/* GRID */
+
+.pub-section{
+    padding:100px 0;
+    background:#fff;
+}
+
+.pub-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+/* CARD */
+
+.pub-card{
+    background:#F8FAFC;
+    padding:35px;
+    border-radius:22px;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+    transition:.35s;
+    position:relative;
+    overflow:hidden;
+}
+
+.pub-card::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background:linear-gradient(90deg,var(--primary),var(--accent));
+}
+
+.pub-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+}
+
+.pub-card h3{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.pub-card span{
+    display:block;
+    font-size:14px;
+    color:#64748B;
+    margin-bottom:15px;
+    font-weight:600;
+}
+
+.pub-card p{
+    color:#475569;
+    line-height:1.8;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+    .pub-grid{
+        grid-template-columns:1fr;
+    }
+
+    .page-hero h1{
+        font-size:36px;
+    }
+}
